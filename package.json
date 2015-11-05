@@ -1,0 +1,29 @@
+{
+  "name": "likehome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.3.3",
+    "dotenv": "^1.2.0",
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "fs": "^0.0.2",
+    "sqlite3": "^3.0.10",
+    "method-override": "^2.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poele/likeHome.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poele/likeHome/issues"
+  },
+  "homepage": "https://github.com/poele/likeHome#readme"
+}
