@@ -1,37 +1,99 @@
 <html>
 <head>
 	<title>Like Home</title>
-	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/foundation.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+	<script src="assets/js/vendor/modernizr.js"></script>
+
 </head>
 
 <body>
 	<header>
-		<h1>LIKE HOME</h1>
+		<div>
+			<h1>LIKE HOME</h1>
+			<h2>A HOME FOR THE HOLIDAYS </h2>
+		</div>
 	</header>
 
 	<main>
-		<h2>WHAT IT IS ABOUT?</h2>
-		<div>
-			<img src="">
-			<img src="">
-			<img src="">
-			<img src="">
-		</div>
+		<section class="search-area">
+			<div class="row" style="margin-top: 50px">
+				<div class="small-5 small-offset-1 columns">
+					<input type="text" placeholder="ex: 11211 or NYC or Midtown">
+				</div>
+				<div class="small-5 columns">
+					<select>
+						<option>Valentine's Day</option>
+						<option>St. Patrick's Day</option>
+						<option>Easter</option>
+						<option>Cinco de Mayo</option>
+						<option>Independence Day</option>
+						<option>Labor Day</option>
+						<option>Columbus Day</option>
+						<option>Halloween</option>
+						<option>Christmas Eve</option>
+						<option>Christmas Day</option>
+					</select>
+				</div>
+				<div class="small-1 columns">
+				</div>	
+			</div>
+			
+			<a href="#" class="button secondary">FIND THINGS TO DO</a>	
+		</section>
 
-		<h3>FIND A HOME FOR THE HOLIDAYS</h3>
-		<input type=""></input>
+		<section class="row directions">
+			<ul class="medium-block-grid-4">
+			  <li><img src="img/1.jpg"></li>
+			  <li><img src="img/2.jpg"></li>
+			  <li><img src="img/3.jpg"></li>
+			  <li><img src="img/4.jpg"></li>
+			</ul>
+		</section>
+
+		
+
+		<section >
+			<h3>OUR STORIES</h3>
+			<div class="row">
+				<article class="medium-4 columns">
+					<img src="img/woman.jpg">
+					<h4>Amandine Pascal</h4>
+					<h5>{host}</h5>
+					<p>My flight was cancelled and I got stuck in New York on the Christmas Eve. No friends, no place to go. Sad, ha? I didn't want to end up eating alone in my hotel room, so I started to look for options.
+					</p>
+				</article>
+				<article class="medium-4 columns">
+					<img src="img/group.jpg">
+					<h4>The Good Timers</h4>
+					<h5>{guests}</h5>
+					<p>My flight was cancelled and I got stuck in New York on the Christmas Eve. No friends, no place to go. Sad, ha? I didn't want to end up eating alone in my hotel room, so I started to look for options.
+					</p>
+				</article>
+				<article class="medium-4 columns">
+					<img src="img/dude.jpg">
+					<h4>James McGuire</h4>
+					<h5>{guest}</h5>
+					<p>My flight was cancelled and I got stuck in New York on the Christmas Eve. No friends, no place to go. Sad, ha? I didn't want to end up eating alone in my hotel room, so I started to look for options.
+					</p>
+				</article>
+			</div>
+		</section>
 
 	</main>
-
 	<footer>
-
-
+		<p>MADE WITH LOVE BY: megan &middot; joy &middot; gab &middot; mike &middot; jeff &middot; iryna </p> 
 	</footer>
 
+<script src="assets/js/vendor/jquery.js"></script>
+<script src="assets/js/vendor/fastclick.js"></script>	
+<script src="assets/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
 
-</body>
+	</body>
 </html>

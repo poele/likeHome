@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 var ejs = require ('ejs');
+var request = require('request');
 
 var bodyParser = require('body-parser');
 var urlencodedBodyParser = bodyParser.urlencoded({extended: false});
@@ -17,4 +18,24 @@ app.use(express.static('public'));
 app.listen(3000, function(){
 	console.log("Listening on 3000")
 });
+
+//functions
+var parseData = function parseData(){
+	var fileData = fs.readFileSync("./data.json", "utf8");
+	// return JSON.parse(fileData);
+};
+
+var saveData = function saveData(myData){
+	var stringify = JSON.stringify(myData);
+	fs.writeFileSync("./data.json", stringify);
+};
+
+//create the index
+app.get("/", function(req, res){
+	var html = fs.readFileSync("./views/index.html", "utf8");
+	var myData = parseData();
+	var rendered = ejs.render(html, {events : myData});
+	res.send(rendered);
+	res.render('index.html', {events:myData});
+})
 

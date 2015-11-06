@@ -4,13 +4,14 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
-    "ejs": "^2.3.3",
-    "dotenv": "^1.2.0",
     "body-parser": "^1.13.3",
+    "dotenv": "^1.2.0",
+    "ejs": "^2.3.3",
     "express": "^4.13.3",
     "fs": "^0.0.2",
-    "sqlite3": "^3.0.10",
-    "method-override": "^2.3.5"
+    "method-override": "^2.3.5",
+    "request": "^2.65.0",
+    "sqlite3": "^3.0.10"
   },
   "devDependencies": {},
   "scripts": {

@@ -1,0 +1,126 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Open Sans', sans-serif;
+}
+
+h2{
+	text-align: center;
+    font-size: .8rem;
+    letter-spacing: .8rem;
+    padding-top: 9px;
+}
+h3{
+	font-size: 1.6rem;
+	padding-bottom: 10px;
+}
+
+h4{
+	text-transform: uppercase;
+	font-size: 1.3rem;
+    margin: 10px auto 0 auto;
+    letter-spacing: .2rem;
+}
+
+h5{
+	font-size: .8rem;
+    font-style: italic;
+}
+
+p{
+	font-size: .8rem;
+	letter-spacing: 2px;
+	text-align: left;
+}
+
+header{
+	text-align: center;
+    background-color: blanchedalmond;
+    padding: 30px;
+    font-weight: 400;
+    letter-spacing: 20px;
+}
+
+header div{
+	border: 1px solid white;
+    padding: 32px;
+    width: 815px;
+    margin: 0 auto;
+}
+
+/*SEARCH AREA*/
+.search-area{
+	border: 1px solid #333;
+    background-color: #333;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+input[type="text"]{
+	padding:2rem;
+	letter-spacing: 1px;
+}
+
+select{
+	height:66px;
+	letter-spacing: 1px;
+}
+
+.button.secondary{
+	margin-top: 20px;
+}
+
+/*HOW TO SECTION*/
+.directions{
+	margin: 50px auto 30px auto;
+}
+
+
+footer{
+	background-color: blanchedalmond;
+	height:120px;
+	padding: 50px;
+}
+
+footer p{
+	text-align:center;
+}
+
+
+/*RESULTS PAGE*/
+.results{
+	
+}
+
+.results article{
+	border: 1px solid #333;
+	text-align:left;
+	margin-bottom:20px;
+	padding:30px;
+}
+
+.results article:hover{
+	background-color: blanchedalmond;
+}
+
+.results ul{
+	margin-left:0;
+}
+
+li{
+	list-style: none;
+}
+
+.map-column{
+	border:1px solid #333;
+	height:80%;
+}
+
+
+
+
+
