@@ -70,7 +70,7 @@
 							 - <%=event.host%> 
 
 						</div>
-						<div id="more" class="button secondary">MORE</div>
+						<div id="more" class="button secondary more">MORE</div>
 
 						<div id="rsvp" class="button secondary">RSVP</div>
 				</article>
@@ -137,9 +137,16 @@
 <script>
 	$(document).foundation();
 
-	$('#more').click(function(){
+	$('.more').click(function(){
 		$(".details").toggle();
+		$('.more').text("LESS");
+		$(this).removeClass('more').addClass('less');
 	});
+
+	$('.less').click(function(){
+		$('#more').text("MORE");
+		$('#more').removeClass('less');
+	})
 
 	$("#rsvp").click(function () {
         $(this).text(function(i, v){
