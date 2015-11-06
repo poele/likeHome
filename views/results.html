@@ -65,12 +65,12 @@
 							<li>NUMBER OF GUESTS: <%=event.guests%></li>
 						</ul>
 						
-						<div id="more" class="button secondary">MORE</div>
 						<div class="details">
 							"<%=event.description%>"
 							 - <%=event.host%> 
 
 						</div>
+						<div id="more" class="button secondary">MORE</div>
 
 						<div id="rsvp" class="button secondary">RSVP</div>
 				</article>
@@ -87,34 +87,17 @@
 						var map;
 						
 						function initMap() {
-						  var myLatLng = {lat: 40.75, lng: -73.98};
-						  var familyDinner = {lat: 40.7552634, lng: -73.9741369};
-						  var cookChat = {lat: 40.7555594, lng: -73.9668632}
-						  var vegan = {lat:40.7581527, lng: -73.967491}
+						  var myLatLng = {lat: 40.0, lng: -73.0};
 
 						  var map = new google.maps.Map(document.getElementById('map'), {
-						    zoom: 13,
+						    zoom: 8,
 						    center: myLatLng
 						  });
 
-						  var marker1 = new google.maps.Marker({
-						    position: familyDinner,
+						  var marker = new google.maps.Marker({
+						    position: myLatLng,
 						    map: map,
-						    title: 'Quiet Family Dinner'
-						  });
-
-						  var marker2 = new google.maps.Marker(
-							{
-						    position: cookChat,
-						    map: map,
-						    title: 'Cook, Chat, Eat'
-						  });
-
-						  var marker3 = new google.maps.Marker(
-						  {
-						    position: vegan,
-						    map: map,
-						    title: 'Vegan Thanksgiving'
+						    title: 'Hello World!'
 						  });
 						}
 
@@ -143,6 +126,7 @@
 
 	$("#rsvp").click(function () {
         $(this).text(function(i, v){
+        	$(this).css("st")
            return v === 'RSVP' ? 'GOING' : 'RSVP'
         })
     });
