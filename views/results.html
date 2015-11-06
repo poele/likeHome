@@ -138,15 +138,12 @@
 	$(document).foundation();
 
 	$('.more').click(function(){
-		$(".details").toggle();
-		$('.more').text("LESS");
-		$(this).removeClass('more').addClass('less');
+		$(this).prevAll(".details").toggle();
+		$(this).text(function(i, text){
+			return text === "MORE" ? "LESS" : "MORE"
+		})
 	});
 
-	$('.less').click(function(){
-		$('#more').text("MORE");
-		$('#more').removeClass('less');
-	})
 
 	$("#rsvp").click(function () {
         $(this).text(function(i, v){
@@ -154,7 +151,6 @@
            return v === 'RSVP' ? 'GOING' : 'RSVP'
         })
     });
-
 	
 </script>
 
