@@ -6,8 +6,8 @@ var request = require('request');
 
 // connection to database and testing
 
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
+// var MongoClient = require('mongodb').MongoClient;
+// var assert = require('assert');
 
 var bodyParser = require('body-parser');
 var urlencodedBodyParser = bodyParser.urlencoded({extended: false});
