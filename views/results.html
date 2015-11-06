@@ -55,24 +55,29 @@
 				
 				<% parsed.events.forEach(function(event){ %>
 				<article>
-					<h3> <a href="/events/<%= event.id %>"> <%=event.title%></a> </h3>
-						<img src="<%= event.img %>" width="175px;">
+					<div class="event-info">
+						<h3> <a href="/events/<%= event.id %>"> <%=event.title%></a> </h3>
+							<img src="<%= event.img %>" width="175px;">
 
-						<ul class="results-info">
-							<li>DATE / TIME: <%=event.date%>, <%=event.time%>  </li>
-							<li>LOCATION: <%=event.location%> </li>
-							<li>CATEGORY: <%=event.category%> </li>
-							<li>NUMBER OF GUESTS: <%=event.guests%></li>
-						</ul>
-						
-						<div class="details">
-							"<%=event.description%>"
-							 - <%=event.host%> 
+							<ul class="results-info">
+								<li>DATE / TIME: <%=event.date%>, <%=event.time%>  </li>
+								<li>LOCATION: <%=event.location%> </li>
+								<li>CATEGORY: <%=event.category%> </li>
+								<li>NUMBER OF GUESTS: <%=event.guests%></li>
+							</ul>
+							
+							<div class="details">
+								"<%=event.description%>"
+								 - <%=event.host%> 
 
-						</div>
-						<div id="more" class="button secondary">MORE</div>
+							</div>
+							<div id="more" class="button secondary">MORE INFO</div>
+							<a href="mailto:megan@example.com" target="_top">
+								<div id="message" class="button secondary">ASK QUESTION</div>
+							</a>
+					</div>
+					<div id="rsvp">RSVP</div>
 
-						<div id="rsvp" class="button secondary">RSVP</div>
 				</article>
 				<% }); %>
 
