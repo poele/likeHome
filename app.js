@@ -20,7 +20,7 @@ app.use(express.static('public'));
 
 
 //config
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
 	console.log("Listening on 3000")
 });
 
