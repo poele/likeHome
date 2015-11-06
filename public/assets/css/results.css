@@ -1,0 +1,20 @@
+.results article{
+	border: 1px solid #333;
+	text-align:left;
+	margin:10px;
+	padding:30px;
+}
+
+.results ul{
+	margin-left:0;
+}
+
+li{
+	list-style: none;
+}
+
+.map-column{
+	background-color: blue;
+	height:100%;
+}
+
