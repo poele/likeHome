@@ -62,7 +62,6 @@
 
 							<ul class="results-info">
 								<li>DATE / TIME: <%=event.date%>, <%=event.time%>  </li>
-								<li>LOCATION: <%=event.location%> </li>
 								<li>CATEGORY: <%=event.category%> </li>
 								<li>NUMBER OF GUESTS: <%=event.guests%></li>
 							</ul>
@@ -91,22 +90,30 @@
 				<script type="text/javascript">
 
 						var map;
+
 						
 						function initMap() {
 						  var myLatLng = {lat: 40.75, lng: -73.98};
 						  var familyDinner = {lat: 40.7552634, lng: -73.9741369};
-						  var cookChat = {lat: 40.7555594, lng: -73.9668632}
-						  var vegan = {lat:40.7581527, lng: -73.967491}
+						  var cookChat = {lat: 40.7555594, lng: -73.9668632};
+						  var vegan = {lat:40.7581527, lng: -73.967491};
+						  var image1 = "img/event1.jpg"
 
 						  var map = new google.maps.Map(document.getElementById('map'), {
 						    zoom: 13,
-						    center: myLatLng
+						    center: myLatLng,
+						    
 						  });
+
+
+
+						  
 
 						  var marker1 = new google.maps.Marker({
 						    position: familyDinner,
 						    map: map,
-						    title: 'Quiet Family Dinner'
+						    title: 'Quiet Family Dinner',
+						    icon: image1,
 						  });
 
 						  var marker2 = new google.maps.Marker(
