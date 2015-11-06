@@ -64,8 +64,15 @@
 							<li>CATEGORY: <%=event.category%> </li>
 							<li>NUMBER OF GUESTS: <%=event.guests%></li>
 						</ul>
-					
-						<a href="#" class="button secondary">RSVP</a>
+						
+						<div id="more" class="button secondary">MORE</div>
+						<div class="details">
+							"<%=event.description%>"
+							 - <%=event.host%> 
+
+						</div>
+
+						<div id="rsvp" class="button secondary">RSVP</div>
 				</article>
 				<% }); %>
 
@@ -102,11 +109,6 @@
 			</div>
 
 		</section>
-
-		
-
-		
-
 	</main>
 	<footer>
 		<p>MADE WITH LOVE BY: megan &middot; joy &middot; gab &middot; mike &middot; jeff &middot; iryna </p> 
@@ -116,7 +118,19 @@
 <script src="assets/js/vendor/fastclick.js"></script>	
 <script src="assets/js/foundation.min.js"></script>
 <script>
-  $(document).foundation();
+	$(document).foundation();
+
+	$('#more').click(function(){
+		$(".details").toggle();
+	});
+
+	$("#rsvp").click(function () {
+        $(this).text(function(i, v){
+           return v === 'RSVP' ? 'GOING' : 'RSVP'
+        })
+    });
+
+	
 </script>
 
 	</body>

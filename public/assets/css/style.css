@@ -37,6 +37,13 @@ h5{
     font-style: italic;
 }
 
+a{
+	color:black;
+}
+
+a:hover{
+	color:gray;
+}
 p{
 	font-size: .8rem;
 	letter-spacing: 2px;
@@ -119,6 +126,22 @@ footer p{
 
 li{
 	list-style: none;
+    text-transform: uppercase;
+    line-height: 1.5rem;
+    font-size: .8rem;
+}
+
+#more{
+
+}
+
+#more:hover{
+	color: gray;
+}
+
+.details{
+	display:none;
+	font-size: .9rem;
 }
 
 .map-column{
@@ -126,7 +149,10 @@ li{
 	height:80%;
 }
 
-#map { height: 100%; }
+#map {
+	height: 100%;
+}
+
 
 
 
