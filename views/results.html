@@ -144,15 +144,14 @@
 	$('.more').click(function(){
 		$(this).prevAll(".details").toggle();
 		$(this).text(function(i, text){
-			return text === "MORE INFO" ? "LESS INFO" : "MORE INFO"
+			return text === "MORE INFO" ? "LESS INFO" : "MORE INFO";
 		})
 	});
 
 
 	$("#rsvp").click(function () {
-        $(this).text(function(i, v){
-        	
-           return v === 'RSVP' ? 'GOING' : 'RSVP'
+        $(this).text(function(i, text){
+           return text === 'RSVP' ? 'GOING' : 'RSVP';
         })
     });
 	
