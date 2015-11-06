@@ -47,8 +47,7 @@
 				</div>	
 			</div>
 			
-<!-- 			<a href="#" class="button secondary">SEARCH</a>	
- -->	</section>
+</section>
 
 		<section class="row results">
 			<div class="small-6 columns results">
@@ -71,7 +70,7 @@
 								 - <%=event.host%> 
 
 							</div>
-							<div id="more" class="button secondary">MORE INFO</div>
+							<div id="more" class="button secondary more">MORE INFO</div>
 							<a href="mailto:megan@example.com" target="_top">
 								<div id="message" class="button secondary">ASK QUESTION</div>
 							</a>
@@ -142,9 +141,13 @@
 <script>
 	$(document).foundation();
 
-	$('#more').click(function(){
-		$(".details").toggle();
+	$('.more').click(function(){
+		$(this).prevAll(".details").toggle();
+		$(this).text(function(i, text){
+			return text === "MORE INFO" ? "LESS INFO" : "MORE INFO"
+		})
 	});
+
 
 	$("#rsvp").click(function () {
         $(this).text(function(i, v){
@@ -152,7 +155,6 @@
            return v === 'RSVP' ? 'GOING' : 'RSVP'
         })
     });
-
 	
 </script>
 
