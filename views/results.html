@@ -75,7 +75,7 @@
 								<div id="message" class="button secondary">ASK QUESTION</div>
 							</a>
 					</div>
-					<div id="rsvp">RSVP</div>
+					<div id="rsvp" class="rsvp">RSVP</div>
 
 				</article>
 				<% }); %>
@@ -149,7 +149,7 @@
 	});
 
 
-	$("#rsvp").click(function () {
+	$(".rsvp").click(function () {
         $(this).text(function(i, text){
            return text === 'RSVP' ? 'GOING' : 'RSVP';
         })
