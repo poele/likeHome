@@ -27,7 +27,7 @@ app.listen(3000, function(){
 //functions
 var parseData = function parseData(){
 	var fileData = fs.readFileSync("./data.json", "utf8");
-	// return JSON.parse(fileData);
+	return JSON.parse(fileData);
 };
 
 var saveData = function saveData(myData){
@@ -42,5 +42,47 @@ app.get("/", function(req, res){
 	var rendered = ejs.render(html, {events : myData});
 	res.send(rendered);
 	res.render('index.html', {events:myData});
-})
+});
+
+//show results
+
+app.get("/results", function(req, res){
+	console.log("results is hit");
+	var parsed = parseData();
+	// var arrObj = [];
+	// parsed.events.forEach(function(event){
+	// 	arrObj.push(event)
+	// 	console.log('arrObj',arrObj);
+	// });
+		var html = fs.readFileSync("./views/results.html", "utf8");
+		var rendered = ejs.render(html, {parsed: parsed});
+		res.send(rendered);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -1,19 +1,19 @@
 <html>
 <head>
 	<title>Like Home</title>
-	<link rel="stylesheet" type="text/css" href="../public/assets/css/foundation.css">
-	<link rel="stylesheet" type="text/css" href="../public/assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/foundation.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-	<script src="../public/assets/js/vendor/modernizr.js"></script>
+	<script src="assets/js/vendor/modernizr.js"></script>
 
 </head>
 
 <body>
 	<header>
 		<div>
-			<h1>LIKE HOME</h1>
+			<h1><a href="/">LIKE HOME</a></h1>
 			<h2>A HOME FOR THE HOLIDAYS </h2>
 		</div>
 	</header>
@@ -52,35 +52,47 @@
 
 		<section class="row results">
 			<div class="small-6 columns results">
+				
+				<% parsed.events.forEach(function(event){ %>
 				<article>
-					
-						<h3>EVENT NAME</h3>
+					<h3> <a href="/events/<%= event.id %>"> <%=event.title%></a> </h3>
+						<img src="<%= event.img %>" width="175px;">
+
 						<ul class="results-info">
-							<li>DATE / TIME: </li>
-							<li>LOCATION: </li>
-							<li>INTERESTS: </li>
-							<li>RESTRICTIONS: </li>
+							<li>DATE / TIME: <%=event.date%>, <%=event.time%>  </li>
+							<li>LOCATION: <%=event.location%> </li>
+							<li>CATEGORY: <%=event.category%> </li>
+							<li>NUMBER OF GUESTS: <%=event.guests%></li>
 						</ul>
 					
 						<a href="#" class="button secondary">RSVP</a>
-					
 				</article>
-				<article >
-					<h3>EVENT NAME</h3>
-					<ul class="results-info">
-						<li>DATE / TIME: </li>
-						<li>LOCATION: </li>
-						<li>INTERESTS: </li>
-						<li>RESTRICTIONS: </li>
-					</ul>
+				<% }); %>
 
-					<a href="#" class="button secondary">RSVP</a>
-				</article>
 			</div>
-			
 
 			<div class="small-6 columns map-column">
-				MAP
+				<div id="map">
+					
+				</div>
+				<script type="text/javascript">
+
+						var map;
+						function initMap() {
+						  map = new google.maps.Map(document.getElementById('map'), {
+						    center: {lat: -34.397, lng: 150.644},
+						    zoom: 8
+						  });
+						}
+
+					</script>
+			    <script src="https://maps.googleapis.com/maps/api/js?key=GOOGLEAPI&callback=initMap&signed_in=true" async defer>
+    </script>
+
+
+
+
+
 			</div>
 
 		</section>
@@ -94,9 +106,9 @@
 		<p>MADE WITH LOVE BY: megan &middot; joy &middot; gab &middot; mike &middot; jeff &middot; iryna </p> 
 	</footer>
 
-<script src="../public/assets/js/vendor/jquery.js"></script>
-<script src="../public/assets/js/vendor/fastclick.js"></script>	
-<script src="../public/assets/js/foundation.min.js"></script>
+<script src="assets/js/vendor/jquery.js"></script>
+<script src="assets/js/vendor/fastclick.js"></script>	
+<script src="assets/js/foundation.min.js"></script>
 <script>
   $(document).foundation();
 </script>

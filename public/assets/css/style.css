@@ -7,6 +7,12 @@ body{
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Open Sans', sans-serif;
 }
+h1 a{
+	color: black;
+}
+h1 a:hover{
+	color: black;
+}
 
 h2{
 	text-align: center;
@@ -119,6 +125,8 @@ li{
 	border:1px solid #333;
 	height:80%;
 }
+
+#map { height: 100%; }
 
 
 
