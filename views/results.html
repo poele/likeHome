@@ -47,32 +47,36 @@
 				</div>	
 			</div>
 			
-<!-- 			<a href="#" class="button secondary">SEARCH</a>	
- -->	</section>
+</section>
 
 		<section class="row results">
 			<div class="small-6 columns results">
 				
 				<% parsed.events.forEach(function(event){ %>
 				<article>
-					<h3> <a href="/events/<%= event.id %>"> <%=event.title%></a> </h3>
-						<img src="<%= event.img %>" width="175px;">
+					<div class="event-info">
+						<h3> <a href="/events/<%= event.id %>"> <%=event.title%></a> </h3>
+							<img src="<%= event.img %>" width="175px;">
 
-						<ul class="results-info">
-							<li>DATE / TIME: <%=event.date%>, <%=event.time%>  </li>
-							<li>LOCATION: <%=event.location%> </li>
-							<li>CATEGORY: <%=event.category%> </li>
-							<li>NUMBER OF GUESTS: <%=event.guests%></li>
-						</ul>
-						
-						<div class="details">
-							"<%=event.description%>"
-							 - <%=event.host%> 
+							<ul class="results-info">
+								<li>DATE / TIME: <%=event.date%>, <%=event.time%>  </li>
+								<li>LOCATION: <%=event.location%> </li>
+								<li>CATEGORY: <%=event.category%> </li>
+								<li>NUMBER OF GUESTS: <%=event.guests%></li>
+							</ul>
+							
+							<div class="details">
+								"<%=event.description%>"
+								 - <%=event.host%> 
 
-						</div>
-						<div id="more" class="button secondary more">MORE</div>
+							</div>
+							<div id="more" class="button secondary more">MORE INFO</div>
+							<a href="mailto:megan@example.com" target="_top">
+								<div id="message" class="button secondary">ASK QUESTION</div>
+							</a>
+					</div>
+					<div id="rsvp">RSVP</div>
 
-						<div id="rsvp" class="button secondary">RSVP</div>
 				</article>
 				<% }); %>
 
@@ -140,7 +144,7 @@
 	$('.more').click(function(){
 		$(this).prevAll(".details").toggle();
 		$(this).text(function(i, text){
-			return text === "MORE" ? "LESS" : "MORE"
+			return text === "MORE INFO" ? "LESS INFO" : "MORE INFO"
 		})
 	});
 
