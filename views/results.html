@@ -80,17 +80,34 @@
 						var map;
 						
 						function initMap() {
-						  var myLatLng = {lat: 40.0, lng: -73.0};
+						  var myLatLng = {lat: 40.75, lng: -73.98};
+						  var familyDinner = {lat: 40.7552634, lng: -73.9741369};
+						  var cookChat = {lat: 40.7555594, lng: -73.9668632}
+						  var vegan = {lat:40.7581527, lng: -73.967491}
 
 						  var map = new google.maps.Map(document.getElementById('map'), {
-						    zoom: 8,
+						    zoom: 13,
 						    center: myLatLng
 						  });
 
-						  var marker = new google.maps.Marker({
-						    position: myLatLng,
+						  var marker1 = new google.maps.Marker({
+						    position: familyDinner,
 						    map: map,
-						    title: 'Hello World!'
+						    title: 'Quiet Family Dinner'
+						  });
+
+						  var marker2 = new google.maps.Marker(
+							{
+						    position: cookChat,
+						    map: map,
+						    title: 'Cook, Chat, Eat'
+						  });
+
+						  var marker3 = new google.maps.Marker(
+						  {
+						    position: vegan,
+						    map: map,
+						    title: 'Vegan Thanksgiving'
 						  });
 						}
 
