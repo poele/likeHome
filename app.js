@@ -49,6 +49,7 @@ app.get("/", function(req, res){
 app.get("/results", function(req, res){
 	console.log("results is hit");
 	var parsed = parseData();
+	console.log(parsed);
 	// var arrObj = [];
 	// parsed.events.forEach(function(event){
 	// 	arrObj.push(event)
