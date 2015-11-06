@@ -5,8 +5,9 @@ var ejs = require ('ejs');
 
 // connection to database and testing
 
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
+
+
+
 
 var bodyParser = require('body-parser');
 var urlencodedBodyParser = bodyParser.urlencoded({extended: false});
@@ -23,3 +24,10 @@ app.listen(3000, function(){
 	console.log("Listening on 3000")
 });
 
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
+MongoClient.connect("mongodb://localhost:27017/likeHome", function(err, db) {
+  if(!err) {
+    console.log("We are connected");
+  }
+});
