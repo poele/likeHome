@@ -3,7 +3,7 @@
 	<title>Like Home</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/foundation.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
 	<script src="assets/js/vendor/modernizr.js"></script>
@@ -20,34 +20,6 @@
 
 	<main>
 		<section class="search-area">
-			<div class="row" style="margin-top: 50px">
-				<div class="small-4 columns">
-					<select>
-						<option>1 mile</option>
-						<option>2 miles</option>
-						<option>5 miles</option>
-						<option>get out of town</option>
-					</select>
-				</div>
-				<div class="small-4 columns">
-					<select>
-						<option>all categories</option>
-						<option>art &amp; culture</option>
-						<option>dinner</option>
-						<option>adventure</option>
-						<option>off the beaten track</option>
-					</select>
-				</div>
-				<div class="small-4 columns">
-					<select>
-						<option>no food restrictions</option>
-						<option>vegan</option>
-						<option>nut allergy</option>
-						<option>paleo</option>
-						<option>enthusiastic carnivore</option>
-					</select>
-				</div>	
-			</div>
 			
 </section>
 
@@ -151,7 +123,9 @@
 	$('.more').click(function(){
 		$(this).prevAll(".details").toggle();
 		$(this).text(function(i, text){
-			return text === "MORE INFO" ? "LESS INFO" : "MORE INFO";
+			return text === "MORE INFO" 
+				? "LESS INFO" 
+				: "MORE INFO";
 		})
 	});
 

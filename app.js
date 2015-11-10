@@ -9,6 +9,17 @@ var request = require('request');
 // var MongoClient = require('mongodb').MongoClient;
 // var assert = require('assert');
 
+//2x regular node, then try to modularize the js files
+// then try to get a sass compiler setup for node so you can do the css in sass
+//1x try using Locomotive and port this to that
+
+//2x setup this as a rails app
+//  then try to get the asset pipeline working so you can do sass
+//	bonus: setup an ES6 transpiler so you can use arrow functions
+
+
+// node ./app.js
+
 var bodyParser = require('body-parser');
 var urlencodedBodyParser = bodyParser.urlencoded({extended: false});
 app.use(urlencodedBodyParser);
